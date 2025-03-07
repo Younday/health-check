@@ -1,0 +1,4 @@
+endpoints:
+  - name: "example"
+    url: "http://localhost:8080/health"
+    interval: 5s

@@ -1,0 +1,8 @@
+endpoints:
+  - name: "example"
+    url: "http://test-api:8080/health"
+    interval: 5s
+    timeout: 3 # Optional, default is 3 seconds
+  - name: "meta"
+    url: "https://metastatuspage.com/api/v2/status.json"
+    interval: 5s

@@ -1,0 +1,16 @@
+services:
+  status-checker:
+    build: .
+    command: uv run /app/src/main.py
+    volumes:
+      - ./src:/app/src
+      - ./config/docker-config.yaml:/app/config.yaml
+    environment:
+      - YAML_FILE=/app/config.yaml
+  test-api:
+    build:
+      context: test-api
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    
