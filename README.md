@@ -36,10 +36,11 @@ This example can be found in the [`config/`](/config/) folder.
 
 ### Environment variables
 
-One environment variable is needed, which contains the path of the YAML file. You can create an `.env` file with the command: `touch .env` and fill this file with the following content:
+One environment variable is needed, which contains the path of the YAML file. Another environment variable can be optionally set to increase the [amount of instances for APScheduler](https://apscheduler.readthedocs.io/en/latest/userguide.html#limiting-the-number-of-concurrently-executing-instances-of-a-job). You can create an `.env` file with the command: `touch .env` and fill this file with the following content:
 
 ```[bash]
 YAML_FILE=config/example-config.yaml
+MAX_INSTACES
 ```
 
 This will point to the example config file in the config folder. Change accordingly to your config file.
