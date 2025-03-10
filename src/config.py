@@ -26,6 +26,7 @@ class Endpoints(BaseModel):
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file='.env', env_file_encoding='utf-8', extra='ignore')
     yaml_file: str
+    max_instances: int = 3
 
 def read_yaml(file_path: str) -> dict:
     with open(file_path) as stream:
